@@ -1,0 +1,11 @@
+<% if current_user %>
+  <%= render 'ribbits/new_form' %>
+<% end %>
+<div class="panel left">
+  <h1>Buddies' Ribbits</h1>
+  <% @ribbits.each do |ribbit| %>
+    <%= render ribbit %>
+  <% end %>
+</div>
+
+<%= javascript_include_tag 'ribbits' %>
