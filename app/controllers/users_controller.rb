@@ -30,4 +30,18 @@ class UsersController < ApplicationController
       followed_id: @user.id
     ).first_or_initialize if current_user
   end
+
+  def edit
+    @user = User.find(params[:id])
+    redirect_to @user unless @user == current_user
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      redirect_to @user, notice: "Profile updated!"
+    else
+      render 'edit'
+    end
+  end
 end
