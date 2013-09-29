@@ -16,7 +16,9 @@
 <div class="panel left">
   <h1>Ribbits</h1>
   <div class="ribbitWrapper">
-    Ribbits comings ...
+    <% @user.ribbits.each do |ribbit| %>
+      <%= render ribbit %>
+    <% end %>
   </div>
 </div>
 
