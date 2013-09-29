@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @ribbit = Ribbit.new
     @user = User.find(params[:id])
   end
 end
