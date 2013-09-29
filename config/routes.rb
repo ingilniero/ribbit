@@ -4,4 +4,6 @@ Ribbitapp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:create, :destroy]
   get 'logout', to: 'sessions#destroy', as: 'logout'
+
+  resources :ribbits
 end
