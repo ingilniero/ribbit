@@ -1,4 +1,4 @@
-Ribbit::Application.routes.draw do
+Ribbitapp::Application.routes.draw do
   root to: "users#new"
 
   resources :users
